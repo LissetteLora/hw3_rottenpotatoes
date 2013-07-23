@@ -2,9 +2,8 @@
 
 Given /the following movies exist/ do |movies_table|
   movies_table.hashes.each do |movie|
-        Movie.create(movie)
-    end
-    assert movies_table.hashes.size == Movie.all.count
+    # each returned element will be a hash whose key is the table header.
+    # you should arrange to add that movie to the database here.
   end
   flunk "Unimplemented"
 end
@@ -13,8 +12,8 @@ end
 #   on the same page
 
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
-    titles = page.all("table#movies tbody tr td[1]").map {|t| t.text}
-    assert titles.index(e1) < titles.index(e2)
+  #  ensure that that e1 occurs before e2.
+  #  page.body is the entire content of the page as a string.
   flunk "Unimplemented"
 end
 
