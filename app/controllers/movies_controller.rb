@@ -1,3 +1,4 @@
+=begin
 class MoviesController < ApplicationController
 
   def show
@@ -58,6 +59,7 @@ class MoviesController < ApplicationController
   end
 
 end
+=end
 
 # This file is app/controllers/movies_controller.rb
 class MoviesController < ApplicationController
